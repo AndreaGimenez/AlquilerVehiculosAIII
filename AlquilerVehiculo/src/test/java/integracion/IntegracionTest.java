@@ -62,7 +62,7 @@ public class IntegracionTest {
 	}
 	
 	@Test
-	public void agregarClientes() {
+	public void agregarClientes() throws ClienteNoEncontradoException {
 		
 		ListadoClientes listadoClientes = new ListadoClientes();
 		
@@ -72,9 +72,6 @@ public class IntegracionTest {
 		
 		listadoClientes.agregar(clientePedro);
 		listadoClientes.agregar(clienteJose);
-		
-		listadoClientes.obtener(clientePedro.getNumero());
-		listadoClientes.obtener(clienteJose.getNumero());
 		
 		assertEquals(clientePedro.getNumero(), listadoClientes.obtener(clientePedro.getNumero()).getNumero());
 		assertEquals(clienteJose.getNumero(), listadoClientes.obtener(clienteJose.getNumero()).getNumero());

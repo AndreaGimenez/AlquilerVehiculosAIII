@@ -16,10 +16,19 @@ public class ListadoClientes {
 		clientes.add(cliente);
 	}
 
-	public Cliente obtener(Integer numero) {
+	public Cliente obtener(Integer numeroDeCliente) throws ClienteNoEncontradoException {
+		Cliente clienteADevolver = null;
 		
-		for() {
-			
+		for(Cliente cliente : clientes) {
+			if(numeroDeCliente == cliente.getNumero()) {
+				clienteADevolver = cliente;
+			}
 		}
+		
+		if(clienteADevolver==null) {
+			throw new ClienteNoEncontradoException();
+		}
+		
+		return clienteADevolver;
 	}
 }
