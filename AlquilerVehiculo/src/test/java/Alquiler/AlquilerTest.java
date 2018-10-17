@@ -18,10 +18,10 @@ public class AlquilerTest {
 		
 		Alquiler nuevoAlquiler = new Alquiler();
 		
-		assertEquals(0, nuevoAlquiler.cantidadItems());
-		nuevoAlquiler.agregar(unAlquilerUnitario).
+		assertEquals(new Integer(0), nuevoAlquiler.cantidadItems());
+		nuevoAlquiler.agregar(unAlquilerUnitario);
 		
-		assertEquals(1, nuevoAlquiler.cantidadItems());
+		assertEquals(new Integer(1), nuevoAlquiler.cantidadItems());
 		
 	}
 }

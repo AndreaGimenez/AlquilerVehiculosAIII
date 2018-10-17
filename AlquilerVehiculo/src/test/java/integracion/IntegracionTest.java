@@ -48,8 +48,6 @@ public class IntegracionTest {
 		catalogoVehiculos.agregar(coche);
 		catalogoVehiculos.agregar(camion);
 		
-		
-		
 		assertEquals("123456", catalogoVehiculos.obtener("123456").getMatricula());
 		assertEquals("Ford Fiesta", catalogoVehiculos.obtener("123456").getMarca());
 		assertEquals(new Integer(2015), catalogoVehiculos.obtener("123456").getModelo());

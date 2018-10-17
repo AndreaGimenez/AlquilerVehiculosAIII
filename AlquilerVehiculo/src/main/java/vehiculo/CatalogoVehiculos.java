@@ -1,7 +1,5 @@
 package vehiculo;
 
-import static org.junit.Assume.assumeNoException;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
