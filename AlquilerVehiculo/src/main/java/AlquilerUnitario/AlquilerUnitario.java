@@ -34,7 +34,7 @@ public class AlquilerUnitario {
 
 	public Integer obtenerPrecio() {
 		
-		return vehiculoAlquilado.obtenerPrecioPorDia(this.cantidadDiasAlquiler);
+		return (cantidadDiasAlquiler * vehiculoAlquilado.obtenerPrecioPorDia());
 	
 	}
 

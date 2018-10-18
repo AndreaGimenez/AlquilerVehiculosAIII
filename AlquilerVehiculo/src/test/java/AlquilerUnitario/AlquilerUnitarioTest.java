@@ -44,12 +44,12 @@ public class AlquilerUnitarioTest{
 	}
 	
 	@Test
-	public void testSeCreaUnAlquilerUnitarioDeCamionConPma400sPor10DiasElCostoDeberiaSer1205000() {
+	public void testSeCreaUnAlquilerUnitarioDeCamionConPma400Por10DiasElCostoDeberiaSer1205000() {
 		
 		Camion camion = new Camion("123456", "Mercedes Benz", 2018, 400);
 		AlquilerUnitario alquilerUnitario = new AlquilerUnitario(camion, 10);
 
 		assertEquals(new Integer(1205000), alquilerUnitario.obtenerPrecio());
 	}
-		
+
 }

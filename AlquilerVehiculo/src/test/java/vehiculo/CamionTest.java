@@ -34,7 +34,13 @@ public class CamionTest {
 		
 		Camion Camion = new Camion("123456", "Mercedes", 2016, 456);
 		assertEquals(new Integer(456), Camion.getPma());
+	}
+	
+	@Test
+	public void testElPrecioBaseDeUnCamionConPma400DeberiaSer120500() {
 		
+		Camion camion = new Camion("123456", "Mercedes Benz", 2016, 400);
+		assertEquals(new Integer(120500), camion.obtenerPrecioPorDia());
 	}
 		
 }

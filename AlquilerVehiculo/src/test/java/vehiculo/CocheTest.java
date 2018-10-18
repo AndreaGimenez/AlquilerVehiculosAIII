@@ -35,4 +35,12 @@ public class CocheTest {
 		Coche coche = new Coche("123456", "Fiat Palio", 2016, 5);
 		assertEquals(new Integer(5), coche.getCantidadPlazas());
 	}
+	
+	@Test
+	public void testElPrecioBaseDeUnCoche5PlazasNoPremiumDeberiaSer1000() {
+		
+		Coche coche = new Coche("123456", "Fiat Palio", 2016, 5);
+		assertEquals(new Integer(1000), coche.obtenerPrecioPorDia());
+	}
+	
 }

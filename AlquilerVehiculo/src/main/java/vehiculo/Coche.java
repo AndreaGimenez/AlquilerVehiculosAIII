@@ -1,23 +1,16 @@
 package vehiculo;
 
-public class Coche extends Vehiculo{
+public class Coche extends VehiculoDePasageros{
 
-	private Integer plazas;
 
 	public Coche(String matricula, String marca, Integer modelo, Integer cantidadPlazas) {
 		
-		super(matricula, marca, modelo, new Integer(500));
-		this.plazas = cantidadPlazas;
+		super(matricula, marca, modelo, cantidadPlazas, new Integer(500));
 		
-	}
-
-	public Integer getCantidadPlazas() {
-		
-		return this.plazas;
 	}
 	
-	public Integer obtenerPrecioPorDia(int cantidadDiasAlquiler) {
+	public Integer obtenerPrecioPorDia() {
 		
-		return ( this.componenteBasePorDia + this.plazas*100 )*cantidadDiasAlquiler;
+		return (this.componenteBasePorDia + this.plazas * 100 );
 	}
 }
