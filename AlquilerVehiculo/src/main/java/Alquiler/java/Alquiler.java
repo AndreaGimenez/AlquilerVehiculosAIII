@@ -10,6 +10,7 @@ public class Alquiler {
 	private Collection<AlquilerUnitario> alquileresDelClientes;
 	
 	public Alquiler() {
+		
 		this.alquileresDelClientes = new ArrayList<AlquilerUnitario>();
 	}
 

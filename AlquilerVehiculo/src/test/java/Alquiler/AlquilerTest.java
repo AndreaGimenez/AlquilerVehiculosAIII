@@ -6,12 +6,13 @@ import org.junit.Test;
 
 import Alquiler.java.Alquiler;
 import AlquilerUnitario.AlquilerUnitario;
+import vehiculo.Camion;
 import vehiculo.Coche;
 
 public class AlquilerTest {
 	
 	@Test
-	public void testSeAgregaUnAlquilerUnitarioAlAlquilerAlquilerDeberiaTenerEseAlquilerUnitario() {
+	public void testSeAgregaUnAlquilerUnitarioAlAlquilerLosAlquileresDelClienteDeberianTenerEseAlquiler() {
 		
 		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
 		AlquilerUnitario unAlquilerUnitario = new AlquilerUnitario(unCoche, 5);
@@ -19,9 +20,33 @@ public class AlquilerTest {
 		Alquiler nuevoAlquiler = new Alquiler();
 		
 		assertEquals(new Integer(0), nuevoAlquiler.cantidadItems());
+		
 		nuevoAlquiler.agregar(unAlquilerUnitario);
 		
 		assertEquals(new Integer(1), nuevoAlquiler.cantidadItems());
 		
 	}
+	
+	@Test
+	public void testSeAgreganDosAlquileresUnitarioAUnAlquilerLosAlquileresDelClienteDeberianTenerEseAlquiler() {
+		
+		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		Camion unCamion = new Camion("456789", "Mercedes Benz", 2014, 500);
+		
+		AlquilerUnitario unAlquilerUnitario = new AlquilerUnitario(unCoche, 5);
+		AlquilerUnitario otroAlquilerUnitario = new AlquilerUnitario(unCamion, 10);
+		
+		Alquiler nuevoAlquiler = new Alquiler(); 
+		nuevoAlquiler.agregar(unAlquilerUnitario);
+		nuevoAlquiler.agregar(otroAlquilerUnitario);
+		
+		assertEquals(new Integer(2), nuevoAlquiler.cantidadItems());
+		
+	}
+	
+	@Test
+	public void testSeAgregaUnAlquilerUnitarioConValorAlAlquilerObtenerValorDeberiaDevolverElValorCorrecto() {
+		
+	}
+	
 }

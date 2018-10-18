@@ -4,12 +4,14 @@ public abstract class Vehiculo {
 	private String matricula;
 	private String marca;
 	private Integer modelo;
+	protected Integer componenteBasePorDia;
 	
-	public Vehiculo(String matricula, String marca, Integer modelo) {
+	public Vehiculo(String matricula, String marca, Integer modelo, Integer componenteBasePorDia) {
 
 		this.matricula = matricula;
 		this.marca = marca;
 		this.modelo = modelo;
+		this.componenteBasePorDia = componenteBasePorDia;
 	}
 	
 	public String getMatricula() {
@@ -26,4 +28,11 @@ public abstract class Vehiculo {
 	
 		return this.modelo;
 	}
+
+	public Integer obtenerPrecioPorDia(int cantidadDiasAlquiler) {
+		
+		return (this.componenteBasePorDia * cantidadDiasAlquiler);
+	}
+	
+
 }
