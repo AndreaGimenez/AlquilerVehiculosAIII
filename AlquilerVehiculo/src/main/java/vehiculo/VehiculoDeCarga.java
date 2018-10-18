@@ -17,7 +17,7 @@ public class VehiculoDeCarga extends Vehiculo{
 	
 	public Integer obtenerPrecioPorDia(int cantidadDiasAlquiler) {
 		
-		return ( this.componenteBasePorDia + 300*pma )*cantidadDiasAlquiler;
+		return (( this.componenteBasePorDia)*cantidadDiasAlquiler);
 	}
 
 }

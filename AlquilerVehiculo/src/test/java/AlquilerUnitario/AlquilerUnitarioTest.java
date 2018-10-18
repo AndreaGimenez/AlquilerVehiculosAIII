@@ -48,9 +48,8 @@ public class AlquilerUnitarioTest{
 		
 		Camion camion = new Camion("123456", "Mercedes Benz", 2018, 400);
 		AlquilerUnitario alquilerUnitario = new AlquilerUnitario(camion, 10);
-		
+
 		assertEquals(new Integer(1205000), alquilerUnitario.obtenerPrecio());
-		
 	}
 		
 }
