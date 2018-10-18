@@ -7,4 +7,7 @@ public class Camion extends VehiculoDeCarga {
 		
 	}
 	
+	public Integer obtenerPrecio(Integer cantidadDias) {
+		return 2000 + ( (this.componenteBasePorDia)*cantidadDias);
+	}
 }

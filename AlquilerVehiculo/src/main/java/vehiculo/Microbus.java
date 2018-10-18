@@ -7,9 +7,9 @@ public class Microbus extends VehiculoDePasageros{
 		
 	}
 	
-	public Integer obtenerPrecioPorDia() {
+	public Integer obtenerPrecio(Integer cantidadDias) {
 		
-		return (this.componenteBasePorDia + this.plazas*120 );
+		return (this.componenteBasePorDia + this.plazas*120 ) * cantidadDias;
 	}
 	
 }

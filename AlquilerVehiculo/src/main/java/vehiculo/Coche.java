@@ -9,8 +9,9 @@ public class Coche extends VehiculoDePasageros{
 		
 	}
 	
-	public Integer obtenerPrecioPorDia() {
+	public Integer obtenerPrecio(Integer cantidadDias) {
 		
-		return (this.componenteBasePorDia + this.plazas * 100 );
+		return (this.componenteBasePorDia + this.plazas * 100 ) * cantidadDias;
 	}
 }
+ 

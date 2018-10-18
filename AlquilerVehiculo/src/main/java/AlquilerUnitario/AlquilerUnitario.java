@@ -17,7 +17,7 @@ public class AlquilerUnitario {
 		this.numeroDeAlquiler = numeradorAlquileres++;
 	}
 
-	public Vehiculo getVehiculo() {
+	public Vehiculo getVehiculo() { 
 		
 		return this.vehiculoAlquilado ;
 	}
@@ -32,9 +32,9 @@ public class AlquilerUnitario {
 		return this.numeroDeAlquiler;
 	}
 
-	public Integer obtenerPrecio() {
+	public Integer obtenerPrecio(Integer cantidadDias) {
 		
-		return (cantidadDiasAlquiler * vehiculoAlquilado.obtenerPrecioPorDia());
+		return vehiculoAlquilado.obtenerPrecio(cantidadDias);
 	
 	}
 

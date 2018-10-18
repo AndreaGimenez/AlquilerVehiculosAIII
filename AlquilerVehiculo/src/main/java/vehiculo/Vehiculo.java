@@ -26,13 +26,16 @@ public abstract class Vehiculo {
 
 	public Integer getModelo() {
 	
-		return this.modelo;
+		return this.modelo; 
 	}
 
 	public Integer obtenerPrecioPorDia() {
 		
 		return this.componenteBasePorDia;
-	}
+	} 
 	
+	public Integer obtenerPrecio(Integer cantidadDias) {
+		return null;
+	}
 
 }

@@ -15,3 +15,4 @@ public class VehiculoDePasageros extends Vehiculo {
 	}
 
 }
+ 

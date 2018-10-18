@@ -40,7 +40,7 @@ public class CocheTest {
 	public void testElPrecioBaseDeUnCoche5PlazasNoPremiumDeberiaSer1000() {
 		
 		Coche coche = new Coche("123456", "Fiat Palio", 2016, 5);
-		assertEquals(new Integer(1000), coche.obtenerPrecioPorDia());
+		assertEquals(new Integer(1000), coche.obtenerPrecio(1));
 	}
 	
 }
