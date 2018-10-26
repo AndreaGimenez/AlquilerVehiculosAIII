@@ -114,4 +114,43 @@ public class IntegracionTest {
 		cliente.agregarAlquiler(segundoAlquiler);
 		assertEquals(new Integer(1226200), cliente.obtenerPrecioAlquileres());
 	}
+	
+	/*@Test
+	public void testSeBuscaElCostoDeLosAlquileresDeUnClienteValidoEseCostoDeberiaSerCorrecto() throws ClienteNoEncontradoException {
+		
+		Cliente cliente = new Cliente("Ana");
+		Cliente otroCliente = new Cliente("Andrea");
+		
+		ListadoClientes listadoDeClientes = new ListadoClientes();
+		
+		listadoDeClientes.agregar(cliente);
+		listadoDeClientes.agregar(otroCliente);
+		
+		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		Microbus unMicrobus = new Microbus ("147258", "Fiat Punto", 2017, 20);
+		Camion unCamion = new Camion("456789", "Mercedes Benz", 2014, 500);
+		Furgoneta unaFurgoneta = new Furgoneta ("852963", "Toyota", 2014, 250);
+		
+		AlquilerUnitario primerAlquilerUnitario = new AlquilerUnitario(unCoche, 7);
+		AlquilerUnitario segundoAlquilerUnitario = new AlquilerUnitario(unMicrobus, 3);
+		AlquilerUnitario tercerAlquilerUnitario = new AlquilerUnitario(unCamion, 5);
+		AlquilerUnitario cuartoAlquilerUnitario = new AlquilerUnitario(unaFurgoneta, 6);
+		
+		Alquiler primerAlquiler = new Alquiler();
+		Alquiler segundoAlquiler = new Alquiler();
+
+		primerAlquiler.agregar(primerAlquilerUnitario);
+		primerAlquiler.agregar(segundoAlquilerUnitario);
+		segundoAlquiler.agregar(tercerAlquilerUnitario);
+		segundoAlquiler.agregar(cuartoAlquilerUnitario);
+		
+		cliente.agregarAlquiler(primerAlquiler);
+		//assertEquals(new Integer(18700), cliente.obtenerPrecioAlquileres());
+		
+		otroCliente.agregarAlquiler(segundoAlquiler);
+		//assertEquals(new Integer(1226200), cliente.obtenerPrecioAlquileres());
+		
+		assertEquals(new Integer(18700), listadoDeClientes.obtener("Ana").obtenerPrecioAlquileres());
+		assertEquals(new Integer(1207500), listadoDeClientes.obtener("Andrea").obtenerPrecioAlquileres());
+	}*/
 }

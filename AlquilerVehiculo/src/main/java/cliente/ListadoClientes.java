@@ -31,4 +31,21 @@ public class ListadoClientes {
 		
 		return clienteADevolver;
 	}
+	
+	public Cliente obtener(String nombreCliente) throws ClienteNoEncontradoException{
+		
+		Cliente clienteADevolver = null;
+		
+		for( Cliente cliente : clientes ) {
+			if(nombreCliente == cliente.getNombre()) {
+				clienteADevolver = cliente;
+			}
+		}
+		
+		if(clienteADevolver == null) {
+			throw new ClienteNoEncontradoException();
+		}
+		
+		return clienteADevolver;
+	}
 }

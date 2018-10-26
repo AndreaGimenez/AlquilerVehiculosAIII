@@ -42,5 +42,4 @@ public class CocheTest {
 		Coche coche = new Coche("123456", "Fiat Palio", 2016, 5);
 		assertEquals(new Integer(1000), coche.obtenerPrecio(1));
 	}
-	
 }
