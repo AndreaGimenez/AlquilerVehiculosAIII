@@ -1,6 +1,6 @@
 package vehiculo;
 
-public class VehiculoDePasageros extends Vehiculo {
+public abstract class VehiculoDePasageros extends Vehiculo {
 	
 	protected Integer plazas;
 	
@@ -13,6 +13,7 @@ public class VehiculoDePasageros extends Vehiculo {
 		
 		return this.plazas;
 	}
-
+	
+	public abstract Integer obtenerPrecio(Integer cantidadDias);
 }
  

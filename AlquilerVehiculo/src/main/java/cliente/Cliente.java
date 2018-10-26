@@ -2,10 +2,7 @@ package cliente;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
-
 import Alquiler.java.Alquiler;
-import AlquilerUnitario.AlquilerUnitario;
 
 public class Cliente {
 
@@ -33,13 +30,24 @@ public class Cliente {
 	}
 
 	public Collection<Alquiler> obtenerAlquileres() {
-		// TODO Auto-generated method stub
+		
 		return this.alquileresDelCliente;
 	}
 
 	public void agregarAlquiler(Alquiler nuevoAlquiler) {
-		// TODO Auto-generated method stub
+		
 		alquileresDelCliente.add(nuevoAlquiler);
+	}
+
+	public Integer obtenerPrecioAlquileres() {
+		
+		Integer precio = 0;
+		
+		for( Alquiler alquiler : alquileresDelCliente ) {
+			precio += alquiler.obtenerPrecio();
+		}
+		
+		return precio;
 	}
 
 }

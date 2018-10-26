@@ -25,8 +25,9 @@ public class Alquiler {
 	}
 
 	public Integer obtenerPrecio() {
-		// TODO Auto-generated method stub
+
 		Integer acumuladorPrecio = 0 ;
+		
 		for(AlquilerUnitario alquiler : alquileresDelClientes) {
 			acumuladorPrecio += alquiler.obtenerPrecio();
 		}

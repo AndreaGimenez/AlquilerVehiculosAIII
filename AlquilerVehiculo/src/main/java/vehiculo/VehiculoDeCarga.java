@@ -1,6 +1,6 @@
 package vehiculo;
 
-public class VehiculoDeCarga extends Vehiculo{
+public abstract class VehiculoDeCarga extends Vehiculo{
 	
 	protected Integer pma;
 	
@@ -15,7 +15,7 @@ public class VehiculoDeCarga extends Vehiculo{
 		return this.pma;
 	}
 	
-	public Integer obtenerPrecio(int cantidadDiasAlquiler) {
+	public Integer obtenerPrecio(Integer cantidadDiasAlquiler) {
 		
 		return (( this.componenteBasePorDia)*cantidadDiasAlquiler); 
 	}

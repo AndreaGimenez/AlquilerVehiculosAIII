@@ -60,5 +60,28 @@ public class AlquilerUnitarioTest{
 		
 		assertEquals(new Integer(11700), alquilerUnitario.obtenerPrecio());
 	}
+	
+	@Test
+	public void testSeCreaAlquilerDeVehiculoDePasajerosPorCeroDiasElPrecioDeberiaSerCero() {
+		
+		Microbus microbus = new Microbus ("123456", "Traffic", 2016, 20);
+		AlquilerUnitario alquilerUnitario = new AlquilerUnitario(microbus, 0);
+		
+		assertEquals(new Integer(0), alquilerUnitario.obtenerPrecio());
+		
+		Coche coche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		AlquilerUnitario otroAlquilerUnitario = new AlquilerUnitario(coche, 0);
+		
+		assertEquals(new Integer (0), otroAlquilerUnitario.obtenerPrecio());
+	}
+	
+	@Test
+	public void testSeCreaAlquilerDeCamionPorCeroDiasElPrecioDeberiaSerCero() {
+		
+		Camion camion = new Camion("123456", "Mercedes Benz", 2018, 400); 
+		AlquilerUnitario alquilerUnitario = new AlquilerUnitario(camion, 0);
+
+		assertEquals(new Integer(0), alquilerUnitario.obtenerPrecio());
+	}
 
 }

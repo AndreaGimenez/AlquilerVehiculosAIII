@@ -28,7 +28,7 @@ public class AlquilerTest {
 	}
 	
 	@Test
-	public void testSeAgreganDosAlquileresUnitarioAUnAlquilerLosAlquileresDelClienteDeberianTenerEseAlquiler() {
+	public void testSeAgreganDosAlquileresUnitarioAUnAlquilerLosAlquileresDelClienteDeberianTenerDosAlquileres() {
 		
 		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
 		Camion unCamion = new Camion("456789", "Mercedes Benz", 2014, 500);
