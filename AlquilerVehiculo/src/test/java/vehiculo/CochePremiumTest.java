@@ -16,11 +16,17 @@ public class CochePremiumTest {
 		assertEquals(new Integer(5), cochePremium.getCantidadPlazas());
 	}
 	
-	@Test 
-	public void testCrearUnCochePremiumMarcaAUDIModelo2014DeberiaLanzarCochePremiumInvalidoException(){
+	@Test
+	public void testElPrecioDeAlquilerPorDiaDeUnCochePremium5PlazasDeberiaSer1250() {
+		CochePremium cochePremium = new CochePremium("123456","AUDI",2018,5);
 		
-		
-		
+		assertEquals(new Integer(1250), cochePremium.obtenerPrecio(1));
 	}
 	
+	/*@Test
+	public void testElPrecioDeAlquilerDeUnCochePremium5PlazasPor5DiasDeberiaSer6250() {
+		CochePremium cochePremium = new CochePremium("123456","AUDI",2018,5);
+		
+		assertEquals(new Integer(6250), cochePremium.obtenerPrecio(5));
+	}*/
 }

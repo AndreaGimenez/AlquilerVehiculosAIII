@@ -5,8 +5,6 @@ import vehiculo.*;
 
 import org.junit.Test;
 
-import Alquiler.java.Alquiler;
-
 public class AlquilerUnitarioTest{
 	
 	@Test

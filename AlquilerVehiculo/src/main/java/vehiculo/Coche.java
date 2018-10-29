@@ -14,4 +14,3 @@ public class Coche extends VehiculoDePasageros{
 		return (this.componenteBasePorDia + this.plazas * 100 ) * cantidadDias;
 	}
 }
- 

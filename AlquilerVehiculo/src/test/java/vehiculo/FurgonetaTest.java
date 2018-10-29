@@ -21,6 +21,6 @@ public class FurgonetaTest {
 	public void testElPrecioBaseDeUnaFurgonetaConPma200DeberiaSer60500() {
 		
 		Furgoneta furgoneta = new Furgoneta("123456", "Renault", 2015, 200);
-		assertEquals(new Integer(60500), furgoneta.obtenerPrecioPorDia());
+		assertEquals(new Integer(60500), furgoneta.obtenerPrecio(1));
 	} 
 }

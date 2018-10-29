@@ -28,12 +28,6 @@ public abstract class Vehiculo {
 	
 		return this.modelo; 
 	}
-
-	public Integer obtenerPrecioPorDia() {
-		
-		return this.componenteBasePorDia;
-	} 
 	
 	public abstract Integer obtenerPrecio(Integer cantidadDias);
-
 }
