@@ -8,7 +8,7 @@ public class Coche extends VehiculoDePasageros{
 		
 		super(matricula, marca, modelo, cantidadPlazas, new Double(500));
 		if(blindado) {
-			factorBlindado = 0.15;
+			factorBlindado = 1.15;
 		}
 		else {
 			factorBlindado = 1.0;

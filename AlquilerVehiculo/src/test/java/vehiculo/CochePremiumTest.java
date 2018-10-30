@@ -29,4 +29,18 @@ public class CochePremiumTest {
 		
 		assertEquals(new Integer(6250), cochePremium.obtenerPrecio(5),new Double(0.1));
 	}
+	
+	@Test
+	public void testElPrecioDeUnCoche5PlazasPremiumBlindadoPorDiaDeberiaSer1437con5() {
+		
+		CochePremium cochePremium = new CochePremium("123456","AUDI",2018,5, true);
+		assertEquals(new Double(1437.5), cochePremium.obtenerPrecio(1), new Double(0.1));
+	}
+	
+	@Test
+	public void testElPrecioDeUnCoche5PlazasPremiumBlindadoPor5DiasDeberiaSer7187con5() {
+		
+		CochePremium cochePremium = new CochePremium("123456","AUDI",2018,5, true);
+		assertEquals(new Double(7187.5), cochePremium.obtenerPrecio(5), new Double(0.1));
+	}
 }
