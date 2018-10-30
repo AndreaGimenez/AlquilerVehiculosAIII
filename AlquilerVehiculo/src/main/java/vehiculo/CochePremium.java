@@ -7,11 +7,6 @@ public class CochePremium extends Coche{
 		super(matricula, marca, modelo, cantidadPlazas);
 		
 	}
-
-	private boolean validarPremium(String marca, Integer modelo) {
-		
-		return (((marca=="AUDI")||(MARCA=="BMW")) & (modelo>=2016));
-	}
 	
 	public Integer obtenerPrecio(Integer cantidadDias) {
 		

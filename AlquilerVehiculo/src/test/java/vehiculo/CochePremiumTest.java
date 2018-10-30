@@ -23,10 +23,10 @@ public class CochePremiumTest {
 		assertEquals(new Integer(1250), cochePremium.obtenerPrecio(1));
 	}
 	
-	/*@Test
+	@Test
 	public void testElPrecioDeAlquilerDeUnCochePremium5PlazasPor5DiasDeberiaSer6250() {
 		CochePremium cochePremium = new CochePremium("123456","AUDI",2018,5);
 		
 		assertEquals(new Integer(6250), cochePremium.obtenerPrecio(5));
-	}*/
+	}
 }
