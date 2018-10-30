@@ -40,7 +40,7 @@ public class CamionTest {
 	public void testElPrecioBaseDeUnCamionConPma400DeberiaSer122500() {
 		
 		Camion camion = new Camion("123456", "Mercedes Benz", 2016, 400);
-		assertEquals(new Integer(122500), camion.obtenerPrecio(1));
+		assertEquals(new Double(122500.0), camion.obtenerPrecio(1));
 	}
 		
 }

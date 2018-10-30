@@ -14,7 +14,7 @@ public class AlquilerTest {
 	@Test
 	public void testSeAgregaUnAlquilerUnitarioAlAlquilerLosAlquileresDelClienteDeberianTenerEseAlquiler() {
 		
-		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5, false);
 		AlquilerUnitario unAlquilerUnitario = new AlquilerUnitario(unCoche, 5);
 		
 		Alquiler nuevoAlquiler = new Alquiler();
@@ -30,7 +30,7 @@ public class AlquilerTest {
 	@Test
 	public void testSeAgreganDosAlquileresUnitarioAUnAlquilerLosAlquileresDelClienteDeberianTenerDosAlquileres() {
 		
-		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5, false);
 		Camion unCamion = new Camion("456789", "Mercedes Benz", 2014, 500);
 		
 		AlquilerUnitario unAlquilerUnitario = new AlquilerUnitario(unCoche, 5);
@@ -47,7 +47,7 @@ public class AlquilerTest {
 	@Test
 	public void testSeAgreganDosAlquileresUnitariosConValorAUnAlquilerObtenerValorTotalDeberiaDevolverElValorCorrecto() {
 		
-		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5, false);
 		Camion unCamion = new Camion("456789", "Mercedes Benz", 2014, 500);
 		
 		AlquilerUnitario unAlquilerUnitario = new AlquilerUnitario(unCoche, 5);
@@ -56,7 +56,7 @@ public class AlquilerTest {
 		alquiler.agregar(unAlquilerUnitario);
 		alquiler.agregar(otroAlquilerUnitario);
 		
-		assertEquals(new Integer(1512000), alquiler.obtenerPrecio());
+		assertEquals(new Double(1512000.0), alquiler.obtenerPrecio());
 		
 	}
 	

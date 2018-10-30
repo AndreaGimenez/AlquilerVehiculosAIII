@@ -4,9 +4,9 @@ public abstract class Vehiculo {
 	private String matricula;
 	private String marca;
 	private Integer modelo;
-	protected Integer componenteBasePorDia;
+	protected Double componenteBasePorDia;
 	
-	public Vehiculo(String matricula, String marca, Integer modelo, Integer componenteBasePorDia) {
+	public Vehiculo(String matricula, String marca, Integer modelo, Double componenteBasePorDia) {
 
 		this.matricula = matricula;
 		this.marca = marca;
@@ -29,5 +29,5 @@ public abstract class Vehiculo {
 		return this.modelo; 
 	}
 	
-	public abstract Integer obtenerPrecio(Integer cantidadDias);
+	public abstract Double obtenerPrecio(Integer cantidadDias);
 }

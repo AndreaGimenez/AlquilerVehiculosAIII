@@ -25,8 +25,8 @@ public class IntegracionTest {
 		
 		CatalogoVehiculos catalogoVehiculos = new CatalogoVehiculos();
 		
-		Coche cocheFord = new Coche("123456", "Ford Fiesta", 2015, 4);
-		Coche cocheBMW = new Coche("123457", "BMW", 2017, 5);
+		Coche cocheFord = new Coche("123456", "Ford Fiesta", 2015, 4, false);
+		Coche cocheBMW = new Coche("123457", "BMW", 2017, 5, false);
 		
 		catalogoVehiculos.agregar(cocheFord);
 		catalogoVehiculos.agregar(cocheBMW);
@@ -46,7 +46,7 @@ public class IntegracionTest {
 	public void agregarCocheYCamion() throws MatriculaRepetidaException, VehiculoNoEncontradoException {
 		
 		CatalogoVehiculos catalogoVehiculos = new CatalogoVehiculos();
-		Coche coche = new Coche("123456", "Ford Fiesta", 2015, 4);
+		Coche coche = new Coche("123456", "Ford Fiesta", 2015, 4, false);
 		Camion camion = new Camion("456789", "Mercedes Benz", 2018, 456);
 		
 		catalogoVehiculos.agregar(coche);
@@ -91,7 +91,7 @@ public class IntegracionTest {
 		
 		Cliente cliente = new Cliente("Ana");
 		
-		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5);
+		Coche unCoche = new Coche("123456", "Ford Fiesta", 2016, 5, false);
 		Microbus unMicrobus = new Microbus ("147258", "Fiat Punto", 2017, 20);
 		Camion unCamion = new Camion("456789", "Mercedes Benz", 2014, 500);
 		Furgoneta unaFurgoneta = new Furgoneta ("852963", "Toyota", 2014, 250);
@@ -110,9 +110,9 @@ public class IntegracionTest {
 		segundoAlquiler.agregar(cuartoAlquilerUnitario);
 		
 		cliente.agregarAlquiler(primerAlquiler);
-		assertEquals(new Integer(18700), cliente.obtenerPrecioAlquileres());
+		assertEquals(new Double(18700.0), cliente.obtenerPrecioAlquileres());
 		cliente.agregarAlquiler(segundoAlquiler);
-		assertEquals(new Integer(1226200), cliente.obtenerPrecioAlquileres());
+		assertEquals(new Double(1226200.0), cliente.obtenerPrecioAlquileres());
 	}
 	
 	/*@Test

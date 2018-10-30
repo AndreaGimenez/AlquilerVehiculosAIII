@@ -31,7 +31,7 @@ public class ClienteTest {
 	@Test
 	public void testSeCreaUnClienteYSeLeAgregaUnAlquilerAhoraDeberiaTenerUnAlquiler(){
 		Cliente cliente = new Cliente("Ana");
-		Coche coche = new Coche("123456", "Ford Fiesta", 2015,5);
+		Coche coche = new Coche("123456", "Ford Fiesta", 2015,5, false);
 		
 		AlquilerUnitario alquilerUnitario = new AlquilerUnitario(coche, 8);
 		Alquiler nuevoAlquiler = new Alquiler();

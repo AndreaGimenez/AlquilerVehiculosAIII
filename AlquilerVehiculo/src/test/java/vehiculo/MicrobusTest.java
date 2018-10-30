@@ -21,6 +21,6 @@ public class MicrobusTest {
 	public void testElPrecioBaseDeUnMicrobusCon20PlazasDeberiaSer3900() {
 		
 		Microbus microbus = new Microbus("123456", "Traffic", 2015, 20);
-		assertEquals(new Integer(3900), microbus.obtenerPrecio(1));
+		assertEquals(new Double(3900.0), microbus.obtenerPrecio(1));
 	} 
 }

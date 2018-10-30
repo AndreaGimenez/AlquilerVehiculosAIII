@@ -9,7 +9,7 @@ public class CatalogoVehiculoTest {
 	@Test
 	public void testAgregarDeberiaAgregarAlCatalogoUnCocheConMatricula123456() throws VehiculoNoEncontradoException, MatriculaRepetidaException {
 		
-		Coche nuevoCoche = new Coche("123456", "Ford Fiesta", 2015, 5);
+		Coche nuevoCoche = new Coche("123456", "Ford Fiesta", 2015, 5, false);
 		CatalogoVehiculos nuevoCatalogo = new CatalogoVehiculos();
 		
 		nuevoCatalogo.agregar(nuevoCoche);
@@ -30,8 +30,8 @@ public class CatalogoVehiculoTest {
 	public void testAgregarDosVehiculosConIgualMatriculaDeberiaLanzaMatriculaRepetidaException() throws MatriculaRepetidaException {
 		
 		CatalogoVehiculos nuevoCatalogo = new CatalogoVehiculos();
-		Coche coche = new Coche("123456", "Ford Fiesta", 2015, 5);
-		Coche otroCoche = new Coche("123456", "Fiat Palio", 2018, 5);
+		Coche coche = new Coche("123456", "Ford Fiesta", 2015, 5, false);
+		Coche otroCoche = new Coche("123456", "Fiat Palio", 2018, 5, false);
 		
 		nuevoCatalogo.agregar(coche);
 		nuevoCatalogo.agregar(otroCoche);

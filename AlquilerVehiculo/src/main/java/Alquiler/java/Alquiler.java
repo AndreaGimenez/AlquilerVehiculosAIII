@@ -24,9 +24,9 @@ public class Alquiler {
 		alquileresDelClientes.add(unAlquilerUnitario);
 	}
 
-	public Integer obtenerPrecio() {
+	public Double obtenerPrecio() {
 
-		Integer acumuladorPrecio = 0 ;
+		Double acumuladorPrecio = 0.0 ;
 		
 		for(AlquilerUnitario alquiler : alquileresDelClientes) {
 			acumuladorPrecio += alquiler.obtenerPrecio();

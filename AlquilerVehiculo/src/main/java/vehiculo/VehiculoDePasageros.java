@@ -4,7 +4,7 @@ public abstract class VehiculoDePasageros extends Vehiculo {
 	
 	protected Integer plazas;
 	
-	public VehiculoDePasageros(String matricula, String marca, Integer modelo, Integer cantidadPlazas, Integer componenteBasePorDia) {
+	public VehiculoDePasageros(String matricula, String marca, Integer modelo, Integer cantidadPlazas, Double componenteBasePorDia) {
 		super(matricula,marca,modelo,componenteBasePorDia);
 		this.plazas = cantidadPlazas ;
 	}
@@ -14,6 +14,6 @@ public abstract class VehiculoDePasageros extends Vehiculo {
 		return this.plazas;
 	}
 	
-	public abstract Integer obtenerPrecio(Integer cantidadDias);
+	public abstract Double obtenerPrecio(Integer cantidadDias);
 }
  

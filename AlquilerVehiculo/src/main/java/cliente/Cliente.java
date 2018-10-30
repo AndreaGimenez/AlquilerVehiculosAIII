@@ -39,9 +39,9 @@ public class Cliente {
 		alquileresDelCliente.add(nuevoAlquiler);
 	}
 
-	public Integer obtenerPrecioAlquileres() {
+	public Double obtenerPrecioAlquileres() {
 		
-		Integer precio = 0;
+		Double precio = 0.0;
 		
 		for( Alquiler alquiler : alquileresDelCliente ) {
 			precio += alquiler.obtenerPrecio();
